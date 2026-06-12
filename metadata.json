@@ -1,0 +1,6 @@
+{
+  "name": "에덴 기숙학원의 비밀",
+  "description": "생체 실험실 탈출 및 친구 구출을 목표로 하는 어드벤처 ARG 방탈출 웹게임",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

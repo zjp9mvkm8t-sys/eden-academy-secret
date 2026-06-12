@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;600;700;900&family=Share+Tech+Mono&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Noto Sans KR", sans-serif;
+  --font-serif: "Noto Serif KR", serif;
+  --font-mono: "Share Tech Mono", monospace;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+.animate-shake {
+  animation: shake 0.35s ease-in-out;
+}
+
+/* 웅장하고 미스터리한 안개 및 금빛 아우라 시각화 */
+@keyframes fog-drift {
+  0% { transform: translate(0, 0) scale(1); opacity: 0.15; }
+  50% { transform: translate(-3%, 2%) scale(1.05); opacity: 0.3; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.15; }
+}
+
+.animate-fog {
+  animation: fog-drift 15s ease-in-out infinite;
+}
+
+@keyframes gold-shine {
+  0%, 100% { filter: drop-shadow(0 0 10px rgba(212,184,106,0.25)); }
+  50% { filter: drop-shadow(0 0 25px rgba(212,184,106,0.6)); }
+}
+
+.animate-gold-shine {
+  animation: gold-shine 4s ease-in-out infinite;
+}
+
+/* 고기풍 석재 텍스처 스타일링 */
+.gothic-stone {
+  position: relative;
+  background-color: #0d0d12;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(212, 184, 106, 0.08) 0%, transparent 60%),
+    radial-gradient(circle at 10% 20%, rgba(13, 13, 18, 0.95), rgba(7, 7, 10, 0.98));
+}
+
+/* 금빛 이끼 및 어둠의 연출 효과 */
+.border-gold-gothic {
+  border-color: rgba(212, 184, 106, 0.25);
+  box-shadow: 0 0 15px rgba(212, 184, 106, 0.03);
+}
+
+.border-gold-gothic:hover {
+  border-color: rgba(212, 184, 106, 0.6);
+  box-shadow: 0 0 25px rgba(212, 184, 106, 0.15);
+}
+
+/* 스크롤바 커스텀 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07070a;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 184, 106, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 184, 106, 0.45);
+}

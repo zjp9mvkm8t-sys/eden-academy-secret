@@ -3,121 +3,545 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>에덴 기숙학원의 비밀</title>
+<title>에덴 기숙학원의 비밀 | 프로젝트 대시보드</title>
 
 <style>
-body{
-background:#0d1117;
-color:white;
-font-family:sans-serif;
+
+:root{
+--bg:#0b0d10;
+--panel:#151922;
+--panel2:#1c212b;
+--gold:#d4b06a;
+--text:#f3f3f3;
+--muted:#b6bcc6;
+--line:#2a313d;
+}
+
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+body{
+background:var(--bg);
+color:var(--text);
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+line-height:1.8;
 }
 
 .container{
-max-width:1000px;
+max-width:1200px;
 margin:auto;
-padding:50px 20px;
+padding:0 24px;
 }
 
 .hero{
+padding:100px 0;
 text-align:center;
-padding:120px 0;
+border-bottom:1px solid var(--line);
 }
 
-h1{
-font-size:56px;
-margin-bottom:10px;
+.badge{
+display:inline-block;
+padding:8px 16px;
+border:1px solid var(--gold);
+border-radius:999px;
+color:var(--gold);
+font-size:14px;
+letter-spacing:1px;
+}
+
+.hero h1{
+font-size:64px;
+margin-top:24px;
+margin-bottom:12px;
 }
 
 .subtitle{
-opacity:.8;
-margin-bottom:40px;
+font-size:22px;
+color:var(--muted);
+}
+
+.meta{
+margin-top:18px;
+color:var(--muted);
+}
+
+.buttons{
+margin-top:40px;
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
 }
 
 .btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-border-radius:10px;
 text-decoration:none;
+padding:15px 24px;
+border-radius:12px;
+font-weight:700;
+transition:.2s;
+}
+
+.btn:hover{
+transform:translateY(-2px);
+}
+
+.primary{
+background:var(--gold);
+color:#111;
+}
+
+.secondary{
+background:var(--panel);
 color:white;
-font-weight:bold;
+border:1px solid var(--line);
 }
 
-.play{
-background:#238636;
+section{
+padding:70px 0;
 }
 
-.github{
-background:#30363d;
+.section-title{
+font-size:34px;
+margin-bottom:24px;
+color:var(--gold);
 }
 
 .card{
-background:#161b22;
-padding:25px;
-border-radius:15px;
-margin-top:20px;
+background:var(--panel);
+border:1px solid var(--line);
+border-radius:18px;
+padding:28px;
 }
 
-footer{
-text-align:center;
-padding:50px;
-opacity:.6;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
 }
+
+.feature{
+background:var(--panel2);
+border:1px solid var(--line);
+border-radius:16px;
+padding:24px;
+}
+
+.feature h3{
+margin-bottom:10px;
+color:var(--gold);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+td{
+padding:14px;
+border-bottom:1px solid var(--line);
+}
+
+td:first-child{
+width:180px;
+font-weight:700;
+color:var(--gold);
+}
+
+pre{
+background:#0d1117;
+border:1px solid var(--line);
+border-radius:14px;
+padding:20px;
+overflow:auto;
+}
+
+.cta{
+text-align:center;
+padding:100px 0;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.footer{
+border-top:1px solid var(--line);
+padding:40px;
+text-align:center;
+color:var(--muted);
+}
+
+.highlight{
+color:var(--gold);
+font-weight:700;
+}
+
 </style>
 </head>
 
 <body>
 
+<header class="hero">
+
 <div class="container">
 
-<div class="hero">
+<div class="badge">
+HANSEONG UNIVERSITY PROJECT
+</div>
+
 <h1>에덴 기숙학원의 비밀</h1>
 
 <p class="subtitle">
-AI 기반 인터랙티브 미스터리 게임
+Secret of Eden
 </p>
 
-<a class="btn play"
-href="https://service-905605828106.asia-south1.run.app">
+<p class="meta">
+AI 기반 인터랙티브 미스터리 ARG 게임
+</p>
+
+<p class="meta">
+한성대학교 · 디지털 스토리텔링과 생성형 AI 활용 실습 · 팀 위아원
+</p>
+
+<div class="buttons">
+
+<a class="btn primary"
+href="https://service-905605828106.asia-south1.run.app"
+target="_blank">
 🎮 게임 시작
 </a>
 
-<a class="btn github"
-href="https://github.com/zjp9mvkm8t-sys/eden-academy-secret">
-📁 GitHub
+<a class="btn secondary"
+href="https://github.com/zjp9mvkm8t-sys/eden-academy-secret"
+target="_blank">
+📁 GitHub Repository
 </a>
 
 </div>
 
-<div class="card">
-<h2>프로젝트 소개</h2>
-<p>
-평범한 기숙학원에서 벌어지는 실종 사건을 추적하는
-인터랙티브 미스터리 게임.
-AI와의 상호작용을 통해 진실을 밝혀 나갑니다.
-</p>
 </div>
+
+</header>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+프로젝트 개요
+</h2>
 
 <div class="card">
-<h2>기술 스택</h2>
-<p>
-React · TypeScript · Vite · Gemini API
-</p>
+
+<table>
+
+<tr>
+<td>프로젝트명</td>
+<td>에덴 기숙학원의 비밀 (Secret of Eden)</td>
+</tr>
+
+<tr>
+<td>개발팀</td>
+<td>위아원</td>
+</tr>
+
+<tr>
+<td>제작 기관</td>
+<td>한성대학교</td>
+</tr>
+
+<tr>
+<td>수업명</td>
+<td>디지털 스토리텔링과 생성형 AI 활용 실습</td>
+</tr>
+
+<tr>
+<td>장르</td>
+<td>AI 기반 인터랙티브 미스터리 ARG</td>
+</tr>
+
+<tr>
+<td>플랫폼</td>
+<td>Web Browser</td>
+</tr>
+
+<tr>
+<td>배포 환경</td>
+<td>Google Cloud Run</td>
+</tr>
+
+</table>
+
 </div>
+
+</div>
+
+</section>
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+프로젝트 목표
+</h2>
 
 <div class="card">
-<h2>개발 로그</h2>
+
 <p>
-v1.0 공개
+
+본 프로젝트는 생성형 AI와 디지털 스토리텔링을 결합하여 사용자가 능동적으로 서사에 참여할 수 있는 인터랙티브 미스터리 경험을 제공하는 것을 목표로 한다.
+
+플레이어는 에덴 기숙학원 내부 시스템을 탐색하며 실종 사건의 진실을 추적하고, AI와의 상호작용을 통해 단서를 수집 및 분석하여 사건을 해결하게 된다.
+
+또한 생성형 AI를 활용한 비선형 서사 구조와 사용자 참여형 스토리텔링의 가능성을 탐구하고자 하였다.
+
 </p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+스토리 개요
+</h2>
+
+<div class="card">
+
+<p>
+
+상위권 학생 양성을 목표로 운영되는 에덴 기숙학원.
+
+그러나 학생들은 어느 순간부터 하나둘씩 사라지기 시작한다.
+
+플레이어는 학원 내부 전산 시스템에 접근하여 숨겨진 문서와 기록을 조사하고, 실종 사건의 진실을 추적하게 된다.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+핵심 기능
+</h2>
+
+<div class="grid">
+
+<div class="feature">
+<h3>AI 상호작용 시스템</h3>
+Gemini API를 활용한 대화형 추론 및 상호작용
+</div>
+
+<div class="feature">
+<h3>탐색 시스템</h3>
+학원 내부 공간과 시스템 조사
+</div>
+
+<div class="feature">
+<h3>문서 분석</h3>
+기록 열람 및 단서 수집
+</div>
+
+<div class="feature">
+<h3>ARG 요소</h3>
+암호 해독과 정보 조합
+</div>
+
+<div class="feature">
+<h3>분기형 서사</h3>
+플레이어 선택에 따른 전개 변화
 </div>
 
 </div>
 
-<footer>
-Secret of Eden © 2026
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+기술 스택
+</h2>
+
+<div class="card">
+
+<p>
+
+<span class="highlight">Frontend</span><br>
+React · TypeScript · Vite
+
+<br><br>
+
+<span class="highlight">UI</span><br>
+Tailwind CSS · Framer Motion
+
+<br><br>
+
+<span class="highlight">AI</span><br>
+Google Gemini API
+
+<br><br>
+
+<span class="highlight">Rendering</span><br>
+HTML5 Canvas API
+
+<br><br>
+
+<span class="highlight">Deployment</span><br>
+Google Cloud Run
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+시스템 아키텍처
+</h2>
+
+<div class="card">
+
+<pre>
+사용자
+   ↓
+React 기반 인터페이스
+   ↓
+게임 로직 처리
+   ↓
+Gemini API
+   ↓
+동적 응답 및 스토리 생성
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+프로젝트 구조
+</h2>
+
+<div class="card">
+
+<pre>
+src/
+ ├ components
+ ├ pages
+ ├ hooks
+ ├ data
+
+public/
+ └ assets
+
+package.json
+vite.config.ts
+</pre>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+프로젝트 자료실
+</h2>
+
+<div class="card">
+
+<p>
+본 프로젝트의 소스 코드 및 개발 문서는 GitHub Repository에서 확인할 수 있다.
+</p>
+
+<br>
+
+<div class="buttons">
+
+<a class="btn secondary"
+href="https://github.com/zjp9mvkm8t-sys/eden-academy-secret"
+target="_blank">
+GitHub Repository
+</a>
+
+<a class="btn primary"
+href="https://service-905605828106.asia-south1.run.app"
+target="_blank">
+게임 실행
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+ACCESS EDEN SYSTEM
+</h2>
+
+<p class="meta">
+에덴 기숙학원 내부 시스템에 접속합니다.
+</p>
+
+<br>
+
+<a class="btn primary"
+href="https://service-905605828106.asia-south1.run.app"
+target="_blank">
+🎮 게임 시작
+</a>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+Team 위아원<br>
+한성대학교 · 디지털 스토리텔링과 생성형 AI 활용 실습
+
 </footer>
 
 </body>
